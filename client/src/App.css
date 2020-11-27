@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+0 - 600px:      phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+*/
+
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 75em) { 
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media screen and (max-width: 56.25em) { 
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  line-height: 1.6;
+  min-width: 26rem;
+}
