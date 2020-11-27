@@ -24,7 +24,8 @@ const Home = () => {
             <ExpirienceSection />
             <AbilitySection />
             <ContactSection />
-            <Fouter />
+            <Fouter/>
+
         </>
     )
 }
