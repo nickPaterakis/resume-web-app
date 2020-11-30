@@ -55,13 +55,7 @@ const Form = () => {
             ...contactForm.formControls
         };
 
-        const updatedFormElement = {
-            ...updatedControls[name]
-        }
-
-        updatedFormElement.value = value;
-
-        updatedControls[name] = updatedFormElement;
+        updatedControls[name].value = value;
 
         setContactForm({
             formControls: updatedControls
@@ -101,8 +95,7 @@ const Form = () => {
             setContactForm({
                 formControls: updatedControls,
             }); 
-        }
-               
+        } 
     }
 
     return (
