@@ -2,4 +2,4 @@
 
 A resume web site that you can demonstrate your skills.
 
-You can see the site here: https://resume-web-site.herokuapp.com/
+You can see a demo here: https://resume-web-site.herokuapp.com/
