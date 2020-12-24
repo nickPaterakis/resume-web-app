@@ -3,12 +3,13 @@ import EmailService from '../../api/EmailService';
 import TextArea from './TextArea';
 import TextInput from './TextInput'
 import validate from './Validate'
+import Aux from '../../hoc/Auxiliary'
 import {
     Form as FormStyledComponent,
     Button,
 } from './ContactElements';
 
-const Form = () => {
+const Form = (props) => {
     const [contactForm, setContactForm] = useState({
         formControls: {
             name: {
@@ -60,6 +61,7 @@ const Form = () => {
         setContactForm({
             formControls: updatedControls
         });
+
     }
 
     const formSubmitHandler = event => {
@@ -82,14 +84,21 @@ const Form = () => {
                 formData[formElementId] = updatedControls[formElementId].value
             }
 
+            props.loadHandler(true);
             EmailService.sendEmail(formData).then(() => {        
                 for (let formElementId in updatedControls) {
                     updatedControls[formElementId].value = '';
                 }
-    
+
+                props.modalHandler(true);
+                props.loadHandler(false);
+
                 setContactForm({
                     formControls: updatedControls,
                 });    
+            }).catch(() => {
+                props.modalHandler(false);
+                props.loadHandler(false);
             });
         } else {
             setContactForm({
@@ -99,32 +108,34 @@ const Form = () => {
     }
 
     return (
-        <FormStyledComponent onSubmit={formSubmitHandler}>
-            <TextInput name="name" 
-                value={contactForm.formControls.name.value}
-                onChange={changeHandler}
-                valid={contactForm.formControls.name.validation.valid}
-                errorMessage={contactForm.formControls.name.validation.errorMessage}
-            />
+        <Aux>
+            <FormStyledComponent onSubmit={formSubmitHandler}>
+                <TextInput name="name" 
+                    value={contactForm.formControls.name.value}
+                    onChange={changeHandler}
+                    valid={contactForm.formControls.name.validation.valid}
+                    errorMessage={contactForm.formControls.name.validation.errorMessage}
+                />
 
-            <TextInput name="email" 
-                value={contactForm.formControls.email.value}
-                onChange={changeHandler}
-                valid={contactForm.formControls.email.validation.valid}
-                errorMessage={contactForm.formControls.email.validation.errorMessage}
-            />
+                <TextInput name="email" 
+                    value={contactForm.formControls.email.value}
+                    onChange={changeHandler}
+                    valid={contactForm.formControls.email.validation.valid}
+                    errorMessage={contactForm.formControls.email.validation.errorMessage}
+                />
 
-            <TextArea name="message" 
-                value={contactForm.formControls.message.value}
-                onChange={changeHandler}
-                valid={contactForm.formControls.message.validation.valid}
-                errorMessage={contactForm.formControls.message.validation.errorMessage}
-            />
-                                
-            <Button type="submit">
-                Send Email
-            </Button>
-        </FormStyledComponent>
+                <TextArea name="message" 
+                    value={contactForm.formControls.message.value}
+                    onChange={changeHandler}
+                    valid={contactForm.formControls.message.validation.valid}
+                    errorMessage={contactForm.formControls.message.validation.errorMessage}
+                />
+                                    
+                <Button type="submit">
+                    Send Email
+                </Button>
+            </FormStyledComponent>
+        </Aux>
     )
 }
 

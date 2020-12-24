@@ -15,10 +15,11 @@ import {
     Experience,
     OrganizationName,
 } from './ExpirienceElements';
+import Aux from '../../hoc/Auxiliary';
 
 const ExpirienceSection = () => {
     return (
-        <>
+        <Aux>
             <ExpirienceContainer id="expiriences">
                 <ExpirienceWrapper>
                     <Title>Experiences</Title>
@@ -134,7 +135,7 @@ const ExpirienceSection = () => {
                     </InfoWrapper>
                 </ExpirienceWrapper>
             </ExpirienceContainer>
-        </>
+        </Aux>
     )
 }
 

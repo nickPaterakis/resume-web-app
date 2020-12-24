@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiHexagon } from 'react-icons/fi';
+import Aux from '../../hoc/Auxiliary'
 import {
     AbilityContainer,
     AbilityWrapper,
@@ -16,17 +17,25 @@ import {
 
 const AbilitySection = () => {
     return (
-        <>
+        <Aux>
             <AbilityContainer id="abilities">
                 <Title>Abilities</Title>
                 <AbilityWrapper>
                     <SkillWrapper>
                         <Subtitle>Skills</Subtitle>
                         <List>
-                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>Spring boot</ListItem>
-                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>Java</ListItem>
-                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>HTML</ListItem>
+                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>JavaScript</ListItem>
+                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>React</ListItem>
                             <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>CSS</ListItem>
+                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>Sass</ListItem>
+                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>HTML</ListItem>
+                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>Java</ListItem>
+                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>Spring Framework</ListItem>
+                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>Spring Boot</ListItem>
+                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>Docker</ListItem>
+                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>Python</ListItem>
+                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>TensorFlow</ListItem>
+                            <ListItem><ItemOrder> <FiHexagon /> </ItemOrder>NumPy</ListItem>
                         </List>
                     </SkillWrapper>
 
@@ -51,7 +60,7 @@ const AbilitySection = () => {
                     </OtherWrapper>
                 </AbilityWrapper>
             </AbilityContainer>
-        </>
+        </Aux>
     )
 }
 

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {FaBars} from 'react-icons/fa';
 import {animateScroll as scroll} from 'react-scroll';
+import Aux from '../../hoc/Auxiliary';
 import {
     Nav,
     NavbarContainer,
@@ -31,7 +32,7 @@ const NavBar = ({ toggle }) => {
     }
 
     return (
-        <>
+        <Aux>
             <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
                     <NavLogo to='/' onClick={toggleHome}>Nicholas Paterakis</NavLogo>
@@ -83,7 +84,7 @@ const NavBar = ({ toggle }) => {
                     </NavMenu>
                 </NavbarContainer>
             </Nav>
-        </>
+        </Aux>
     )
 }
 

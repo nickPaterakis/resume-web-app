@@ -7,6 +7,7 @@ import ExpirienceSection from '../components/ExpirienceSection';
 import AbilitySection from '../components/AbilitySection';
 import ContactSection from '../components/ContactSection';
 import Fouter from '../components/Footer';
+import Aux from '../hoc/Auxiliary'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ const Home = () => {
     }
 
     return (
-        <>
+        <Aux>
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <Navbar toggle={toggle}/>
             <HeroSection />
@@ -25,8 +26,7 @@ const Home = () => {
             <AbilitySection />
             <ContactSection />
             <Fouter/>
-
-        </>
+        </Aux>
     )
 }
 
