@@ -1,0 +1,74 @@
+.form {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-group {
+  padding: 1.5rem 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: rgb(245, 240, 240);
+  font-size: 2rem;
+  text-align: left;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 1.2rem 0.3rem;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  resize: vertical;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1.7rem;
+  color: rgb(245, 240, 240);
+
+  &:hover {
+    border-bottom: 1px solid rgb(245, 240, 240);
+    transition: 0.8s ease;
+  }
+}
+
+.text-area {
+  width: 100%;
+  padding: 1.2rem 0.3rem;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  height: 20rem;
+  background-color: transparent;
+  font-size: 1.7rem;
+  color: rgb(245, 240, 240);
+
+  &:hover {
+    border-bottom: 1px solid rgb(245, 240, 240);
+    transition: 0.8s ease;
+  }
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  margin-top: 0.6rem;
+  width: 100%;
+  height: 3rem;
+  background-color: rgb(235, 75, 75);
+  border: 1px solid rgb(230, 14, 14);
+  border-radius: 6px;
+}
+
+.error-message {
+  color: rgb(245, 240, 240);
+  font-size: 1.2rem;
+  margin-left: 0.8rem;
+}

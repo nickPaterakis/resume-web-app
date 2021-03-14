@@ -1,0 +1,20 @@
+.btn {
+  border-radius: 5rem;
+  background: rgb(245, 240, 240);
+  white-space: nowrap;
+  padding: 1.8rem 5.8rem;
+  margin-top: 2.5rem;
+  color: #010606;
+  font-size: 1.6rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.8s ease-in-out;
+    background: #1ea0eb;
+    color: #010605;
+  }
+}

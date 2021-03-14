@@ -18,7 +18,7 @@ public class EmailController {
     }
 
     @PostMapping(path = "/send-email")
-    public void sendEmail(@RequestBody Email email) {
+    public void emailReceiver(@RequestBody Email email) {
         emailService.sendSimpleMessage(email);
     }
 }

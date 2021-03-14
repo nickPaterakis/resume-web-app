@@ -1,0 +1,121 @@
+.expiriences {
+  width: 100%;
+  padding: 0 20vw 0 20vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+
+  @media screen and (max-width: 75rem) {
+      padding: 0 15vw 0 15vw;
+  }
+
+  @media screen and (max-width: 37.5rem) {
+      padding: 0 5vw 0 5vw;
+  }
+
+  &__title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+    word-spacing: .5rem;
+    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    color: rgb(29, 73, 117);
+    grid-area: title;
+
+    @media screen and (max-width: 75em) {
+        margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 120rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-self: center;
+  }
+
+  &__work {
+    width: 100%;
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "title ."
+    "Expirience Expirience";
+    align-items: center;
+  }
+
+  &__education {
+    width: 100%;
+    display: grid;
+    margin-bottom: 10rem;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "title ."
+    "Expirience Expirience";
+    align-items: center;
+  }
+
+  &__container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 73%;
+    grid-template-rows: auto;
+    grid-column-gap: 2%;
+    grid-row-gap: 2rem;
+    grid-area: Expirience;
+
+    @media screen and (max-width: 75em) {
+        grid-template-columns: 1fr;
+        grid-row-gap: .5rem;
+    }
+
+    @media screen and (max-width: 37.5em) {
+        grid-row-gap: 0;
+    }
+  }
+
+  &__left-column {
+    display: flex;
+    justify-self: flex-start;
+    flex-direction: column;
+    margin-top: .3rem;
+    line-height: 1.6;
+
+    @media screen and (max-width: 75em) {
+        margin-top: 3rem;
+    }
+  }
+
+  &__right-column {}
+
+  &__year {
+    font-size: 1.8rem;
+  }
+
+  &__organization-name {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  &__position {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    font-size: 2rem;
+  }
+
+  &__expirience {
+    font-size: 2rem;
+    
+    @media screen and (max-width: 37.5em) {
+        font-size: 1.6rem;
+    }
+  }
+}

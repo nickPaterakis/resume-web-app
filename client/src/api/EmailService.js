@@ -1,10 +1,8 @@
-import axios from 'axios'
+import axios from 'axios';
 
-class EmailService {
+// const EmailService = () => {
+// };
 
-    sendEmail(email) {
-        return axios.post('http://localhost:8080/send-email', email);
-    }
-}
+const sendEmail = (email) => axios.post('http://localhost:8080/send-email', email);
 
-export default new EmailService()
+export default sendEmail;
