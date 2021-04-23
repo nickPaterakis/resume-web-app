@@ -1,5 +1,5 @@
-# resume-web-site
+# resume-web-app
 
-A resume web site that you can demonstrate your skills.
+A resume web application that you can demonstrate your skills.
 
 You can see a demo here: https://resume-web-site.herokuapp.com/
